@@ -1,0 +1,50 @@
+@import "../index.css";
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #286dbb; /* Couleur de fond moderne */
+  font-family: 'Arial', sans-serif;
+  flex-direction: column;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #fff;
+  border-top: 8px solid #ffcc01;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  animation: fadeIn 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

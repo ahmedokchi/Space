@@ -1,0 +1,113 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Couleurs principales */
+  --background-dark: #121212;
+  --background-light: #ffffff;
+  --text-dark: rgba(255, 255, 255, 0.87);
+  --text-light: #212121;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --button-bg-dark: #1a1a1a;
+  --button-bg-light: #f4f4f4;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Par défaut */
+  color: var(--text-dark);
+  background-color: var(--background-dark);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: var(--accent-color);
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 1.6;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg-dark);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--accent-hover);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-light);
+    background-color: var(--background-light);
+  }
+  a:hover {
+    color: var(--accent-hover);
+  }
+  button {
+    background-color: var(--button-bg-light);
+    color: var(--text-light);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
