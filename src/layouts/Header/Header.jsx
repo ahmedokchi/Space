@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
-import "./header.scss";
+import "./Header.scss";
 
 export default function Header() {
   const location = useLocation();
